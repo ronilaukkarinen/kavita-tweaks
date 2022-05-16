@@ -3,10 +3,12 @@
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:focus,
 :root .bg-rolle {
+  --primary-color: #000;
   --color-main: #000;
   --side-nav-item-active-color: transparent;
   --nav-tab-bg-color: var(--color-main);
   --nav-link-bg-color: var(--color-main);
+  --dropdown-item-hover-bg-color: var(--color-main);
   --card-border-color: transparent;
   --input-border-color: transparent;
   --pagination-link-border-color: transparent;
@@ -131,6 +133,10 @@ h3,
     margin-left: 60px !important;
     margin-top: 20px !important;
   }
+
+  body .companion-bar.companion-bar-content {
+    margin-left: 220px;
+  }
 }
 
 .dark-mode *:not(code),
@@ -139,16 +145,16 @@ h3,
 }
 
 /* Better grid */
-.row {
+.row.g-0.mt-2.mb-2 {
   display: grid !important;
   margin: 0 !important;
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 20px;
 }
 
-.card,
-.card-overlay,
-.card img {
+.row.g-0.mt-2.mb-2 .card,
+.row.g-0.mt-2.mb-2 .card-overlay,
+.row.g-0.mt-2.mb-2 .card img {
   aspect-ratio: 158 / 230;
   width: 100% !important;
   max-width: 100% !important;
@@ -159,7 +165,7 @@ h3,
   height: auto !important;
 }
 
-.col-auto {
+.row.g-0.mt-2.mb-2 .col-auto {
   margin: 0 !important;
   padding: 0 !important;
   min-width: 0 !important;
@@ -175,13 +181,13 @@ h3,
 }
 
 @media (max-width: 1500px) {
-  .row {
+  .row.g-0.mt-2.mb-2 {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media (max-width: 760px) {
-  .row {
+  .row.g-0.mt-2.mb-2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -196,5 +202,15 @@ body .pagination {
 
 app-metadata-filter + .d-flex > [role="navigation"] {
   margin-top: 0 !important;
-  display: none !important;
+  opacity: 0 !important;
+  height: 20px !important;
+  margin-bottom: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+}
+
+/* Book metadata view */
+app-series-metadata-detail .row {
+  display: block !important;
+  margin-bottom: 40px !important;
 }
