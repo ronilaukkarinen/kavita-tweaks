@@ -33,7 +33,7 @@ body *:not(.fa):not(.fas) {
 }
 
 .side-nav-item.active i::before {
-  color: var(--color-main)!important;
+  color: var(--color-main) !important;
 }
 
 .btn-primary:hover i::before,
@@ -73,7 +73,7 @@ body .section-title {
 }
 
 .swiper-wrapper {
-  gap: 10px ! important;
+  gap: 10px !important;
 }
 
 .btn-secondary {
@@ -105,6 +105,17 @@ h2[title] {
   box-shadow: none !important;
 }
 
+.reading-bar .button > i + span {
+  opacity: 0;
+  transition: all 200ms;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.reading-bar .button:hover > i + span {
+  opacity: 1;
+}
+
 body .p-2 {
   padding: 0 !important;
 }
@@ -125,4 +136,65 @@ h3,
 .dark-mode *:not(code),
 .dark-mode *:not(a) {
   background-color: #0d1117;
+}
+
+/* Better grid */
+.row {
+  display: grid !important;
+  margin: 0 !important;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 20px;
+}
+
+.card,
+.card-overlay,
+.card img {
+  aspect-ratio: 158 / 230;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.overlay {
+  height: auto !important;
+}
+
+.col-auto {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+
+.card-title {
+  width: 90% !important;
+}
+
+.card-actions {
+  bottom: -5px !important;
+  top: unset !important;
+}
+
+@media (max-width: 1500px) {
+  .row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body .pagination {
+  margin: 40px 0;
+}
+
+.disabled {
+  opacity: .3;
+}
+
+app-metadata-filter + .d-flex > [role="navigation"] {
+  margin-top: 0 !important;
+  display: none !important;
 }
