@@ -210,7 +210,16 @@ app-metadata-filter + .d-flex > [role="navigation"] {
 }
 
 /* Book metadata view */
-app-series-metadata-detail .row {
+app-series-metadata-detail .row,
+app-series-metadata-detail .row.g-0.mt-2.mb-2 {
   display: block !important;
-  margin-bottom: 40px !important;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+  max-width: 800px !important;
+}
+
+app-series-metadata-detail h5 {
+  margin-bottom: 8px !important;
+  font-weight: 500 !important;
+  margin-top: 40px !important;
 }
