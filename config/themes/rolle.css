@@ -47,6 +47,7 @@ body *:not(.fa):not(.fas) {
   display: flex;
   gap: 5px;
   font-size: 16px;
+  align-items: center;
 }
 
 app-library {
@@ -107,14 +108,18 @@ h2[title] {
   box-shadow: none !important;
 }
 
-.reading-bar .button > i + span {
+.reading-bar .btn > i + span {
   opacity: 0;
   transition: all 200ms;
   font-size: 14px;
   margin-top: 8px;
 }
 
-.reading-bar .button:hover > i + span {
+.reading-bar button {
+  border: 0 !important;
+}
+
+.reading-bar .btn:hover > i + span {
   opacity: 1;
 }
 
@@ -139,9 +144,16 @@ h3,
   }
 }
 
+.dark-mode .drawer-container *:not(.progress-bar),
+.dark-mode .drawer-container,
+.dark-mode,
 .dark-mode *:not(code),
 .dark-mode *:not(a) {
-  background-color: #0d1117;
+  background-color: #0d1117 !important;
+}
+
+.dark-mode .btn-close {
+  filter: none !important;
 }
 
 /* Better grid */
