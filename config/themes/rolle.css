@@ -160,12 +160,22 @@ h3,
   }
 }
 
+body[theme="dark"] .dark-mode .reading-bar,
+html .dark-mode,
+body[theme="dark"] .dark-mode,
 .dark-mode .drawer-container *:not(.progress-bar),
 .dark-mode .drawer-container,
 .dark-mode,
 .dark-mode *:not(code),
 .dark-mode *:not(a) {
   background-color: #0d1117 !important;
+}
+
+.dark-mode .reader-container p:not(.fa):not(.fas),
+.dark-mode .book-content p:not(.fa):not(.fas),
+body[theme="dark"] .dark-mode .reader-container p:not(.fa):not(.fas),
+body[theme="dark"] .dark-mode .book-content p:not(.fa):not(.fas) {
+  color: #c9d1d9 !important;
 }
 
 .dark-mode .btn-close {
