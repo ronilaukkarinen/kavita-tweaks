@@ -8,6 +8,8 @@ This repository includes some UI tweaks for [Kavita e-book server](https://githu
 2. Activate in Settings
 3. Enjoy!
 
+![2022-05-27 22_23_08-Kavita - Dashboard](https://user-images.githubusercontent.com/1534150/170777564-452e2e7d-0bfe-4f92-a485-34182fc60c62.png)
+
 ## Progress of the book
 
 1. Get [Custom JavaScript for Websites](https://chrome.google.com/webstore/detail/custom-javascript-for-web/ddbjnfjiigjmcpcpkmhogomapikjbjdk).
